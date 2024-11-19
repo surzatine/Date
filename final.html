@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>See You</title>
+    <style>
+        .content {
+            position: absolute;
+            color: #ff008a;
+            left: 50%;
+            top: 50%;
+
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 36px;
+
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .love {
+            width: 100px;
+            height: 100px;
+        }
+
+        .gif {
+            width: 250px;
+            height: 250px;
+        }
+
+        button {
+            padding: 10px 30px;
+            margin: 10px;
+            font-size: 15px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            border: #ff008a 2px solid;
+            border-radius: 8px;
+
+        }
+
+        #yes {
+            background-color: #ff008a;
+            color: white;
+        }
+
+        #no {
+            background-color: white;
+            color: #ff008a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <center>
+            <img class="love" src="love-png-30869.png" alt="" srcset="">
+
+            <p>See you soon!!❤️❤️</p>
+
+            <img class="gif" src="date.gif">
+            <br><br>
+            <p id="final">Dont forget on </p>
+
+            <!-- <button id="yes">CLICK ME</button> -->
+            <!-- <button id="no">No</button> -->
+        </center>
+    </div>
+
+</body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const date = urlParams.get('date');
+    const time = urlParams.get('time');
+
+    // Display the data on the page
+    document.getElementById('final').textContent = "Don't forget on " + date + " at " + time + ".";
+    // document.getElementById('emailDisplay').textContent = email;
+</script>
+<script>
+
+</script>
+
+</html>

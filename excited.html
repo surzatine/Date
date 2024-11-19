@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Excited</title>
+    <style>
+        .content {
+            position: absolute;
+            color: #ff008a;
+            left: 50%;
+            top: 50%;
+
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 36px;
+
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .love {
+            width: 100px;
+            height: 100px;
+        }
+
+        .gif {
+            width: 250px;
+            height: 250px;
+        }
+
+        button {
+            padding: 10px 30px;
+            margin: 10px;
+            font-size: 15px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            border: #ff008a 2px solid;
+            border-radius: 8px;
+
+        }
+
+        /* Slider */
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: #ff008a;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+
+        #yes {
+            background-color: #ff008a;
+            color: white;
+        }
+
+        #no {
+            background-color: white;
+            color: #ff008a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <center>
+            <img class="love" src="love-png-30869.png" alt="" srcset="">
+
+            <p>Rate how excited are you</p>
+
+            <img class="gif" src="happy.gif">
+            <br><br>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="10" value="10" class="slider" id="myRange">
+            </div>
+
+            <button id="yes">Continue</button>
+            <!-- <button id="no">No</button> -->
+        </center>
+    </div>
+
+
+</body>
+<script>
+    // var slider = document.getElementById("myRange");
+    // var output = document.getElementById("yes");
+    // output.innerHTML = "Excited: " + slider.value; // Display the default slider value
+
+    // // Update the current slider value (each time you drag the slider handle)
+    // slider.oninput = function () {
+    //     output.innerHTML = "Excited: " + this.value;
+    // } 
+
+
+</script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const date = urlParams.get('date');
+    const time = urlParams.get('time');
+
+    document.getElementById('yes').onclick = function () {
+        window.location.href = `final.html?date=${date}&time=${time}`;
+    }
+
+
+    // Display the data on the page
+    // document.getElementById('nameDisplay').textContent = name;
+    // document.getElementById('emailDisplay').textContent = email;
+</script>
+
+</html>

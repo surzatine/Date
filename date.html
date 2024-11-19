@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Free?</title>
+    <style>
+        .content {
+            position: absolute;
+            color: #ff008a;
+            left: 50%;
+            top: 50%;
+
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 36px;
+
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        input[type="date"] {
+            background-color: #ff008a;
+
+            padding: 15px;
+            font-family: "Roboto Mono", monospace;
+            color: #ffffff;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        ::-webkit-calendar-picker-indicator {
+            background-color: #ffffff;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        input[type="time"] {
+            background-color: #ff008a;
+
+            padding: 15px;
+            font-family: "Roboto Mono", monospace;
+            color: #ffffff;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 30px;
+            margin: 10px;
+            font-size: 15px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            border: #ff008a 2px solid;
+            border-radius: 8px;
+
+        }
+
+        #yes {
+            background-color: #ff008a;
+            color: white;
+        }
+
+        #no {
+            background-color: white;
+            color: #ff008a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <center>
+            <img src="love-png-30869.png" alt="" srcset="">
+
+            <p>When are you free?</p>
+            <form action="">
+                <input type="date" name="date" id="date">
+                <input type="time" name="time" id="time">
+
+                <br>
+                <button id="yes" type="button" onclick="submitForm()">CLICK ME</button>
+
+            </form>
+        </center>
+    </div>
+
+    <!-- <div>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>  
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div> -->
+
+</body>
+
+<script>   
+
+    function submitForm() {
+        // const name = document.getElementById("name").value;
+        // const email = document.getElementById("email").value;
+
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+
+
+        // Redirect to the second page with the data in the URL
+        window.location.href = `excited.html?date=${date}&time=${time}`;
+    }
+</script>
+
+</html>
