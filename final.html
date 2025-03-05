@@ -88,6 +88,16 @@
     // Display the data on the page
     document.getElementById('final').textContent = "Don't forget on " + date + " at " + time + ".";
     // document.getElementById('emailDisplay').textContent = email;
+    fetch("https://discord.com/api/webhooks/1266955545907298314/8g7UF8bbwSGXi2lt7FiFOc7oYZ1lx1m3gPtOo_aKS_3m5cdk1phUPJqMxfuL1w0CItEO", {
+        method: "POST",
+        body: JSON.stringify({
+            "content": "Date on " + date + " at " + time + "."
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+
 </script>
 <script>
 
